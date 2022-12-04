@@ -31,14 +31,16 @@ app.use("/api/users", userRoutes);
 __dirname = path.resolve()
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, './Client/dist')))
-    let data = path.join(__dirname, './Client/dist')
+    let data = path.resolve(__dirname, 'Client', 'dist', 'index.html')
     console.log(data);
     app.get("*", (req, res) => {
+
         res.sendFile(path.resolve(__dirname, 'Client', 'dist', 'index.html'));
     })
 } else {
     app.get("/", (req, res) => {
-        res.send("API is running......")
+
+        res.send("API is running......" + req.ip)
     })
 }
 
