@@ -1,0 +1,2 @@
+// "boom": "concurrently -c 'red,green' -n 'server,client'  \"nodemon run server\" \"npm run client\""
+ "client": " npm run dev --prefix Client"

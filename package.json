@@ -4,9 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": " node index.js",
-        "client": " npm run dev --prefix Client",
-        "boom": "concurrently -c 'red,green' -n 'server,client'  \"nodemon run server\" \"npm run client\""
+        "start": " nodemon index.js"
     },
     "author": "",
     "license": "ISC",
