@@ -39,8 +39,8 @@ if (process.env.NODE_ENV === 'production') {
     })
 } else {
     app.get("/", (req, res) => {
-
-        res.send("API is running......" + req.ip)
+        let christoffer = 21
+        res.send("API is running......" + christoffer)
     })
 }
 
